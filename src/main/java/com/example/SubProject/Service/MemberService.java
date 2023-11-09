@@ -1,7 +1,7 @@
-package Service;
+package com.example.SubProject.Service;
 
-import Entity.MemberEntity;
-import Repository.MemberRepository;
+import com.example.SubProject.Entity.MemberEntity;
+import com.example.SubProject.Repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +17,7 @@ public class MemberService {
         this.memberRepository = memberRepository;
     }
 
-    public MemberEntity userLogin(String userId){return memberRepository.userLogin(userId);}
+    public Optional<MemberEntity> userLogin(String userId){return memberRepository.userLogin(userId);}
 
 
 }

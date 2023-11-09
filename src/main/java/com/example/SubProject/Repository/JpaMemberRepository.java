@@ -1,8 +1,7 @@
-package Repository;
+package com.example.SubProject.Repository;
 
-import Entity.MemberEntity;
+import com.example.SubProject.Entity.MemberEntity;
 import jakarta.persistence.EntityManager;
-import jakarta.persistence.NoResultException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,10 +18,10 @@ public class JpaMemberRepository implements MemberRepository{
     public JpaMemberRepository(EntityManager em){this.em = em;}
 
     @Override
-    public MemberEntity userLogin(String userid) {
-        MemberEntity member =  em.createQuery("select m from member  m where m.userid = :userid and m.useyn = 1",MemberEntity.class)
+    public Optional<MemberEntity> userLogin(String userid) {
+        MemberEntity member =  em.createQuery("select m from MemberEntity  m where m.userid = :userid and m.useyn = 1",MemberEntity.class)
                 .setParameter("userid", userid)
                 .getSingleResult();
-        return member;
+        return Optional.ofNullable(member);
     }
 }

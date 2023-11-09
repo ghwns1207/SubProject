@@ -14,12 +14,10 @@ public class HelloController {
         model.addAttribute("serviceName" , "안녕하세요");
         return "index";
     }
-
     @GetMapping("/login")
     public  String LoginPage (){
-        return "Login";
+        return "LoginPage";
     }
-
 
 
 }

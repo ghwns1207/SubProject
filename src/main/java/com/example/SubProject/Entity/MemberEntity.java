@@ -1,4 +1,4 @@
-package Entity;
+package com.example.SubProject.Entity;
 
 //import jakarta.persistence.Entity;
 
@@ -10,6 +10,7 @@ import java.util.Date;
 
 @Entity
 @Data
+@Table(name = "member")
 public class MemberEntity {
 
     @Id

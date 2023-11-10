@@ -19,5 +19,10 @@ public class HelloController {
         return "LoginPage";
     }
 
+    @GetMapping("/Singup")
+    public  String SinUpPage (){
+        return "Singup";
+    }
+
 
 }

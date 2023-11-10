@@ -7,7 +7,7 @@ function loginSub(e) {
    let id = document.getElementById('userId').value;
    let password = document.getElementById('userPW').value;
    console.log(id,password);
-   e.preventDefault()
+   e.preventDefault();
    $.ajax({
        type : 'POST',
        url : "mlogin",

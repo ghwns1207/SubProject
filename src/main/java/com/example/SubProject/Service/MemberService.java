@@ -19,5 +19,6 @@ public class MemberService {
 
     public Optional<MemberEntity> userLogin(String userId){return memberRepository.userLogin(userId);}
 
+    public boolean userSingUp(MemberEntity memberEntity){return  memberRepository.userSingUpo(memberEntity);}
 
 }

@@ -27,9 +27,9 @@ public class MemberEntity {
     private String phone;
     @Column(length = 50)
     private String email;
-
+    private String role;
     @Column(nullable = false, columnDefinition = "integer default 1")
-    private Integer useyn;
+    private Integer useyn = 1;
 
     @CreationTimestamp
     @Temporal(TemporalType.DATE)

@@ -21,5 +21,6 @@ signupTable.addEventListener( 'keyup', (e) =>{
 function SingUpSub(e) {
     e.preventDefault();
     console.log(userPW, userBirthday, userEmail , userId, userCheckPW);
+
 }
 

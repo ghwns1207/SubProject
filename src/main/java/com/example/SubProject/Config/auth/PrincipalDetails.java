@@ -62,7 +62,7 @@ public class PrincipalDetails implements UserDetails {
 
     @Override // 비밀번호 유효기간이 지났는지 확인
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override // 계정이 활성화 되어 있는지 (휴면 계정 확인)

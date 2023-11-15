@@ -27,6 +27,8 @@ public class MemberEntity {
     private String phone;
     @Column(length = 50)
     private String email;
+
+    @Column(columnDefinition = "VARCHAR(255) DEFAULT 'USER'")
     private String role;
     @Column(nullable = false, columnDefinition = "integer default 1")
     private Integer useyn = 1;

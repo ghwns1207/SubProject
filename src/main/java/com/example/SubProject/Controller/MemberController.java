@@ -18,10 +18,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class MemberController {
 
     private final MemberService memberService;
-    private  PasswordEncoder passwordEncoder;
+    private  BCryptPasswordEncoder passwordEncoder;
 
     @Autowired
-    public MemberController(MemberService memberService, PasswordEncoder passwordEncoder) {
+    public MemberController(MemberService memberService, BCryptPasswordEncoder passwordEncoder) {
         this.passwordEncoder = passwordEncoder;
         this.memberService = memberService;
     }
